@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NINE & LENA ·</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- NAVBAR MINIMAL -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text">NINE</span>
+      </div>
+      <div class="nav-badge">
+        <span>LENA + NINE</span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <div class="hero-tagline">
+            <span class="tag-dot"></span>
+            <span>roteiro  · curitiba</span>
+          </div>
+          <h1 class="hero-title">
+            LUGARES PARA<br>
+            <span class="hero-title-highlight">LENA IR COM NINE</span>
+          </h1>
+          <p class="hero-description">
+            Museus, bares e outros lugares com mais de 70 anos de história 🤓☝️.<br>
+            Uma curadoria feita por um doido pela cidade.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" id="totalPlaces">0</span>
+              <span class="stat-label">LUGARES HISTÓRICOS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">70+</span>
+              <span class="stat-label">ANOS DE HISTÓRIA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2026</span>
+              <span class="stat-label">ROLLMOPS</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="character-stack">
+            <div class="character nine">
+              <img src="imgs/nine.jpg" alt="Nine" class="char-img">
+              <div class="char-label">NINE</div>
+            </div>
+            <div class="character lena">
+              <img src="imgs/lena.jpg" alt="Lena" class="char-img">
+              <div class="char-label">LENA</div>
+            </div>
+          </div>
+          <div class="floating-element disco">🪩</div>
+          <div class="floating-element star">⭐</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTROS COM BOTÃO CHECKLIST -->
+    <section class="filters-section">
+      <div class="container">
+        <div class="filters-wrapper">
+          <button id="btnAll" class="filter-btn active">TODOS</button>
+          <button id="btnMuseus" class="filter-btn">🏛️ MUSEUS</button>
+          <button id="btnBares" class="filter-btn">🍻 BARES & RESTAURANTES</button>
+          <button id="btnLojas" class="filter-btn">🏪 LOJAS & COMÉRCIOS</button>
+          <button id="btnChecklist" class="filter-btn checklist-btn">✓ CHECKLIST</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTAGEM DE LUGARES -->
+    <section class="places-section">
+      <div class="container">
+        <div id="placesContainer" class="places-grid">
+          <!-- cards serão injetados via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-card" data-aos="zoom-in">
+          <div class="quote-icon">"</div>
+          <p class="quote-text">WEAR THE GOOD TIMES</p>
+          <p class="quote-author">— NINE & LENA, 2026</p>
+          <div class="quote-chips">
+            <span>🍬 BALA DI GOMA</span>
+            <span>🍫 BARRA DI CHOCOLATI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>✦ ROTEIRO  · CURITIBA · LENA NINE ✦</p>
+    </div>
+  </footer>
+
+  <!-- Modal Checklist -->
+  <div id="checklistModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>✓ MEU ROTEIRO</h2>
+        <span class="modal-close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtitle">Vamo marcar o que já:</p>
+        <div id="checklistItems" class="checklist-list"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="resetChecklist" class="reset-btn">LIMPAR TODOS</button>
+        <button id="saveChecklist" class="save-btn">SALVAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
